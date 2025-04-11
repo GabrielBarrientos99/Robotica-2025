@@ -2,6 +2,11 @@
 
 **Parpadeo de un LED:** Realizar un programa que haga parpadear un LED conectado en el pin 13 (el Arduino UNO ya tiene un LED integrado en este pin).
 
+### 📌 Diagrama de conexión:
+
+![image](https://github.com/user-attachments/assets/b8f4ce7b-4f3e-4694-acc4-5bc831f2d477)
+
+
 ### Código completo:
 
 ```cpp
