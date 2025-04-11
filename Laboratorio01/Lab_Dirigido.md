@@ -80,6 +80,11 @@ Aquí encontrarás varios pines esenciales para alimentar sensores y otros dispo
 ### Pines Digitales (Digital I/O)
 
 Numerados del 0 al 13 (14 pines totales)
+En la parte superior derecha de la placa, numerados del 0 al 13, justo al lado de donde dice DIGITAL - PWM~.
+
+0    1    2   3~   4   5~   6~   7   8   9~  10~  11~ 12   13
+RX  TX                               PWM (con ~)
+
 
 **Funcionalidades:**
 
