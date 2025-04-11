@@ -37,13 +37,29 @@ Ejemplo:
     Estas luces parpadean cuando el Arduino se está comunicando con la computadora.
 ```
 
-### Puerto de energía
+### Puerto de energía (DC interface)
 
 - Sirve para alimentar el Arduino si no lo tienes conectado por USB.
 
  ```
 Ejemplo:
-    Puedes usar una batería de 9 voltios si quieres que tu proyecto sea portátil (como un robot que camine sin estar conectado a la compu).
+    Puedes usar una batería de 9 voltios si quieres que tu proyecto sea portátil
+    (como un robot que camine sin estar conectado a la compu).
+```
+
+### Sección de energía (Power)
+
+- Aquí hay varios "pines especiales":
+  
+*GND (Ground)* = Tierra, siempre la necesitas cuando conectas algo externo.
+
+*5V o 3.3V* = Son pines que proporcionan electricidad a sensores, luces, etc.
+
+*Vin* = Entrada de energía si estás usando una batería externa.
+
+ ```
+Ejemplo:
+    Si conectas un sensor que necesita 5V, lo enchufas al pin 5V y a GND.
 ```
 
 
