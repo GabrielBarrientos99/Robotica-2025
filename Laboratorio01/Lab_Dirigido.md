@@ -6,8 +6,10 @@
 
 ### Botón de Reinicio (Reset button)
 
-Este botón permite reiniciar el programa que está ejecutando tu Arduino.
-- Equivale a apagar y volver a encender la placa rápidamente sin desconectar cables.
+| Función | Imagen |
+|---------|--------|
+| <ul><li>Este botón permite reiniciar el programa que está ejecutando tu Arduino.</li><li>Equivale a apagar y volver a encender la placa rápidamente sin desconectar cables.</li></ul> | ![Botón Reset](https://github.com/user-attachments/assets/6e1e0944-0fbf-4211-8c76-61095b17706b) |
+
 
 **Ejemplo práctico:**  
 > Si tienes un programa que hace parpadear un LED, al presionar el botón de reset, el LED comenzará nuevamente su ciclo desde el principio.
@@ -16,11 +18,11 @@ Este botón permite reiniciar el programa que está ejecutando tu Arduino.
 
 ### Puerto USB (USB Interface)
 
-Permite conectar el Arduino a tu computadora. Tiene dos funciones clave:
+| Función | Imagen |
+|---------|--------|
+| <ul><li>**Cargar programas (sketches)** escritos desde tu computadora.</li><li>**Comunicación Serial:** Enviar y recibir datos entre el Arduino y la computadora.</li></ul> | ![image](https://github.com/user-attachments/assets/86bfe15f-ab3a-4239-8fd9-91ed826d8f84) |
 
-1. **Cargar programas (sketches)** escritos desde tu computadora.
-2. **Comunicación Serial:** Enviar y recibir datos entre el Arduino y la computadora.
-
+ 
 **Ejemplo de comunicación serial:**
 
 ```cpp
@@ -40,9 +42,9 @@ void loop() {
 
 Arduino tiene varios LEDs incorporados que indican diferentes estados:
 
-- **LED L:** Conectado internamente al pin 13. Muy útil para pruebas rápidas sin necesidad de usar componentes adicionales.
-- **LED TX (Transmit):** Parpadea cuando Arduino envía datos a la computadora.
-- **LED RX (Receive):** Parpadea cuando Arduino recibe datos desde la computadora.
+| Función | Imagen |
+|---------|--------|
+| <ul><li>**LED L:** Conectado internamente al pin 13. Muy útil para pruebas rápidas sin necesidad de usar componentes adicionales.</li><li>**LED TX (Transmit):** Parpadea cuando Arduino envía datos a la computadora.</li><li>**LED RX (Receive):** Parpadea cuando Arduino recibe datos desde la computadora.</li></ul> | ![image](https://github.com/user-attachments/assets/d9b73693-16a1-4a07-8313-7dd4e932c987) |
 
 **Ejemplo práctico:**  
 > Al subir un programa al Arduino desde el IDE, los LEDs TX y RX parpadearán indicando que hay transmisión de datos.
@@ -51,7 +53,9 @@ Arduino tiene varios LEDs incorporados que indican diferentes estados:
 
 ### Puerto de Energía (DC Interface)
 
-Permite alimentar el Arduino sin necesidad del cable USB.
+| Función | Imagen |
+|---------|--------|
+| <ul><li>Permite alimentar el Arduino sin necesidad del cable USB.</li></ul> | ![image](https://github.com/user-attachments/assets/3df23306-9a58-4d0e-b395-f6c1f3b5851f)|
 
 - Útil para proyectos autónomos o portátiles.
 - Recomendado usar una fuente externa (por ejemplo, una batería de 9V).
@@ -63,7 +67,11 @@ Permite alimentar el Arduino sin necesidad del cable USB.
 
 ### Sección de Energía (Power)
 
-Aquí encontrarás varios pines esenciales para alimentar sensores y otros dispositivos externos:
+| Función | Imagen |
+|---------|--------|
+| <ul><li>Aquí encontrarás varios pines esenciales para alimentar sensores y otros dispositivos externos</li></ul> | ![image](https://github.com/user-attachments/assets/79131d25-c216-4c2b-884c-2b70141a3e80) |
+
+Caracteristicas especificas:
 
 | Pin   | Función                                            | Ejemplo de uso                                |
 |-------|----------------------------------------------------|-----------------------------------------------|
@@ -79,31 +87,33 @@ Aquí encontrarás varios pines esenciales para alimentar sensores y otros dispo
 
 ### Pines Digitales (Digital I/O)
 
-Numerados del 0 al 13 (14 pines totales)
-En la parte superior derecha de la placa, numerados del 0 al 13, justo al lado de donde dice DIGITAL - PWM~.
+| Función | Imagen |
+|---------|--------|
+| <ul><li>Numerados del 0 al 13 (14 pines totales)</li><li>Entrada digital (digitalRead())</li><li>Salida digital (digitalWrite())</li></ul> | ![image](https://github.com/user-attachments/assets/42d66f35-baf7-469a-ada4-5b0e4202b1a4)|
 
-0    1    2   3~   4   5~   6~   7   8   9~  10~  11~ 12   13
-RX  TX                               PWM (con ~)
+**Ejemplo práctico:**
 
-
-**Funcionalidades:**
-
-- Entrada digital (digitalRead())
-
-- Salida digital (digitalWrite())
-
-- PWM (~) en pines 3,5,6,9,10,11 (analogWrite())
+ ```cpp
+pinMode(8, OUTPUT);           // Pin 8 como salida digital
+digitalWrite(8, HIGH);        // Encender LED conectado al pin 8
+ ```
 
 
 ### Pines Analógicos (Analog Inputs)
 
-Numerados del A0 al A5 (6 pines)
+| Función | Imagen |
+|---------|--------|
+| <ul><li>Numerados del A0 al A5 (6 pines)</li><li>Lectura analógica de 10-bit (0-1023) con analogRead()</li><li>Voltaje de referencia: 0-5V (por defecto)</li></ul> | ![image](https://github.com/user-attachments/assets/35fa84ef-ff1e-4d10-ada6-787390e69a3a)|
 
-**Funcionalidades:**
 
-- Lectura analógica de 10-bit (0-1023) con analogRead()
+**Ejemplo práctico:**
 
-- Voltaje de referencia: 0-5V (por defecto)
+ ```cpp
+int sensorValue = analogRead(A0);  // Leer sensor conectado al pin A0
+Serial.println(sensorValue);       // Mostrar valor leído en monitor serial
+ ```
+
+
 
 
 
