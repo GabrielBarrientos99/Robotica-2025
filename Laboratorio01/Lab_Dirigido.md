@@ -4,7 +4,7 @@
 
 ---
 
-### 🔄 Botón de Reinicio (Reset button)
+### Botón de Reinicio (Reset button)
 
 Este botón permite reiniciar el programa que está ejecutando tu Arduino.
 - Equivale a apagar y volver a encender la placa rápidamente sin desconectar cables.
@@ -14,12 +14,12 @@ Este botón permite reiniciar el programa que está ejecutando tu Arduino.
 
 ---
 
-### 🔌 Puerto USB (USB Interface)
+### Puerto USB (USB Interface)
 
 Permite conectar el Arduino a tu computadora. Tiene dos funciones clave:
 
-1. 📂 **Cargar programas (sketches)** escritos desde tu computadora.
-2. 📡 **Comunicación Serial:** Enviar y recibir datos entre el Arduino y la computadora.
+1. **Cargar programas (sketches)** escritos desde tu computadora.
+2. **Comunicación Serial:** Enviar y recibir datos entre el Arduino y la computadora.
 
 **Ejemplo de comunicación serial:**
 
@@ -36,7 +36,7 @@ void loop() {
 
 ---
 
-### 💡 LEDs Indicadores
+### LEDs Indicadores
 
 Arduino tiene varios LEDs incorporados que indican diferentes estados:
 
@@ -49,7 +49,7 @@ Arduino tiene varios LEDs incorporados que indican diferentes estados:
 
 ---
 
-### 🔋 Puerto de Energía (DC Interface)
+### Puerto de Energía (DC Interface)
 
 Permite alimentar el Arduino sin necesidad del cable USB.
 
@@ -61,7 +61,7 @@ Permite alimentar el Arduino sin necesidad del cable USB.
 
 ---
 
-### ⚡ Sección de Energía (Power)
+### Sección de Energía (Power)
 
 Aquí encontrarás varios pines esenciales para alimentar sensores y otros dispositivos externos:
 
