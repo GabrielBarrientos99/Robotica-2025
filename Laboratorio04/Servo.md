@@ -40,3 +40,52 @@ void loop() {
   delay(15);                           // waits for the servo to get there
 }
 ```
+# Ejercicio 2
+Usar el potenciometro para controlar el angulo del servo
+
+# Ejercicio 3
+![image](https://github.com/user-attachments/assets/bf6b7cf5-f01b-4fc8-9d8d-5c27e07313b3)
+
+![WhatsApp Image 2025-04-25 at 5 45 26 PM](https://github.com/user-attachments/assets/e3f0c4fc-5000-4ed3-bd06-d4daa518119e)
+
+![WhatsApp Image 2025-04-25 at 5 45 04 PM](https://github.com/user-attachments/assets/fd2a625c-288b-4c59-96a4-56882aa25349)
+
+
+```cpp
+#include <Servo.h>
+Servo servo1;
+int servopin=3;
+int angulo = 0;
+int botonPin1=6;
+int botonPin2=7;
+int estado1=0;
+int estado2=0;
+void setup() {
+  servo1.attach(servopin);
+  pinMode(botonPin1,INPUT);
+  pinMode(botonPin2,INPUT);
+  pinMode(botonPin1,INPUT_PULLUP);
+  pinMode(botonPin2,INPUT_PULLUP);
+  servo1.write(angulo);
+
+}
+
+void loop() {
+  estado1 = digitalRead(botonPin1);
+  estado2 = digitalRead(botonPin2);
+  if(estado1 == LOW){
+    angulo++;
+    if(angulo>=180){
+      angulo=180;
+    }
+  } 
+  if(estado2 == LOW){
+    angulo--;
+    if(angulo<=0){
+      angulo=0;
+    }
+  } 
+  servo1.write(angulo);
+  delay(10);
+}
+```
