@@ -89,3 +89,46 @@ void loop() {
   delay(10);
 }
 ```
+
+# Ejercicio 4
+
+![image](https://github.com/user-attachments/assets/b2a5f514-09ae-4d58-b0bb-17de27f29a3e)
+
+![WhatsApp Image 2025-04-25 at 5 59 15 PM](https://github.com/user-attachments/assets/96da64a9-c939-45e2-8451-8d2ff2a0233b)
+
+
+```cpp
+#include <Servo.h>
+
+Servo myservo;  // create Servo object to control a servo
+int buttonPin = 6;//unico boton en pin 6
+int estadoBoton=0;
+int pos = 0;    // variable to store the servo position
+bool invertirBoton = true;
+void setup() {
+  myservo.attach(3);  // attaches the servo on pin 9 to the Servo object
+  pinMode(buttonPin,INPUT);
+  pinMode(buttonPin,INPUT_PULLUP);
+  myservo.write(pos);
+}
+
+void loop() {
+  estadoBoton = digitalRead(buttonPin);
+  if(estadoBoton==LOW){
+    if(invertirBoton){
+    for (pos = 0; pos <= 90; pos += 1) { // goes from 0 degrees to 90 degrees
+      
+      myservo.write(pos);              // tell servo to go to position in variable 'pos'
+      delay(15);                       // waits 15 ms for the servo to reach the position
+    }
+    }
+    else{
+    for (pos = 90; pos >= 0; pos -= 1) { // goes from 90 degrees to 0 degrees
+      myservo.write(pos);              // tell servo to go to position in variable 'pos'
+      delay(15);                       // waits 15 ms for the servo to reach the position
+    }
+    }
+  }
+  invertirBoton = !invertirBoton;
+}
+```
