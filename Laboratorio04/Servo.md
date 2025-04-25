@@ -3,6 +3,9 @@
 ![image](https://github.com/user-attachments/assets/43437e21-a99c-4826-a6b7-138c996b1e10)
 
 ### Cables de llegada
+
+![image](https://github.com/user-attachments/assets/81ffaa0a-f2aa-4699-b761-57795aaa3af0)
+
 ![WhatsApp Image 2025-04-25 at 5 12 34 PM](https://github.com/user-attachments/assets/552ed50f-7c63-4d83-9145-e2e000414e90)
 
 ### Estructura general
