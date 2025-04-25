@@ -128,7 +128,8 @@ void loop() {
       delay(15);                       // waits 15 ms for the servo to reach the position
     }
     }
+    invertirBoton = !invertirBoton;
   }
-  invertirBoton = !invertirBoton;
+  
 }
 ```
